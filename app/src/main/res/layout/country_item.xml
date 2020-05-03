@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/extra_huge_size">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/gradient_vertical" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/xsmall_size"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/countryFlagIV"
+                android:layout_width="@dimen/extra_large_size"
+                android:layout_height="@dimen/huge_size"
+                tools:src="@color/colorBlack" />
+
+            <TextView
+                android:id="@+id/countryNameTV"
+                android:layout_width="@dimen/extra_large_size"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/small_size"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="2"
+                tools:text="Turkey" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/caseTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_weight="1"
+            tools:text="1" />
+
+        <TextView
+            android:id="@+id/activeCaseTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_weight="1"
+            tools:text="3" />
+
+        <TextView
+            android:id="@+id/deathTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_weight="1"
+            tools:text="5" />
+
+        <TextView
+            android:id="@+id/recoveredCaseTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_weight="1"
+            tools:text="7" />
+    </LinearLayout>
+
+
+</FrameLayout>

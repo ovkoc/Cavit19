@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: nurisezgin.com.rxtrash:rxtrash:1.0.3@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/33f9fd00279de74799728cc0f8f1aad3/jetified-rxtrash-1.0.3/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/33f9fd00279de74799728cc0f8f1aad3/jetified-rxtrash-1.0.3/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/nurisezgin.com.rxtrash/rxtrash/1.0.3/3d747daa5b08a7647a4e6f2e43847b3e8125bc45/rxtrash-1.0.3-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

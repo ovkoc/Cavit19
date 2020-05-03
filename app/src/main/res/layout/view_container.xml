@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:id="@+id/errorLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorWhite">
+
+            <TextView
+                android:id="@+id/errorTextView"
+                style="@style/TextAppearance.AppCompat.Display1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="@dimen/medium_large_size"
+                android:layout_marginTop="@dimen/extra_very_large_size"
+                android:layout_marginEnd="@dimen/medium_large_size"
+                android:text="@string/common_error_message" />
+
+            <Button
+                android:id="@+id/error_retry"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/huge_size"
+                android:layout_gravity="bottom"
+                android:layout_margin="@dimen/medium_size"
+                android:background="@color/colorBlue"
+                android:text="@string/retry"
+                android:textColor="@color/colorWhite" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/loadingLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorWhite">
+
+            <com.github.ybq.android.spinkit.SpinKitView
+                android:id="@+id/spin_kit"
+                style="@style/SpinKitView.Large.FadingCircle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                app:SpinKit_Color="@color/colorAccent" />
+
+        </FrameLayout>
+
+    </FrameLayout>
+
+</layout>

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.ovkoc.cavit.ui.home.HomeViewModel" />
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.ovkoc.cavit.ui.custom.toolbar.CavitToolbar
+            android:id="@+id/homeToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize" />
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swipeToRefreshLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="?android:attr/actionBarSize">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.ovkoc.cavit.ui.custom.container.ContainerView
+                    android:id="@+id/cView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:error_visible="@{viewModel.error}"
+                    app:loading_visible="@{viewModel.loading}"
+                    app:on_retry_click="@{viewModel::retry}">
+
+                    <FrameLayout
+                        android:id="@+id/messageLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/gradient_vertical"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/messageTextView"
+                            style="@style/TextAppearance.AppCompat.Medium"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginStart="@dimen/medium_large_size"
+                            android:layout_marginTop="@dimen/extra_very_large_size"
+                            android:layout_marginEnd="@dimen/medium_large_size"
+                            android:text="@string/country_not_found" />
+
+                    </FrameLayout>
+
+                    <LinearLayout
+                        android:id="@+id/contentLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:visibility="@{viewModel.content}">
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/gradient_vertical"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:paddingStart="74dp"
+                            android:paddingEnd="0dp">
+
+                            <TextView
+                                android:id="@+id/caseLabelTV"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="20dp"
+                                android:layout_weight="1"
+                                android:ellipsize="end"
+                                android:gravity="center_vertical"
+                                android:maxLines="1"
+                                android:text="Case" />
+
+                            <TextView
+                                android:id="@+id/activeCaseLabelTV"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="20dp"
+                                android:layout_weight="1"
+                                android:ellipsize="end"
+                                android:maxLines="1"
+                                android:text="Active" />
+
+                            <TextView
+                                android:id="@+id/deathLabelTV"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="20dp"
+                                android:layout_weight="1"
+                                android:ellipsize="end"
+                                android:maxLines="1"
+                                android:text="Death" />
+
+                            <TextView
+                                android:id="@+id/recoveredCaseLabelTV"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="20dp"
+                                android:layout_weight="1"
+                                android:ellipsize="end"
+                                android:maxLines="1"
+                                android:text="Recovered" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_gravity="bottom"
+                            android:background="@color/colorGray" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/countriesRecyclerView"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            tools:listitem="@layout/country_item" />
+
+                    </LinearLayout>
+
+                </com.ovkoc.cavit.ui.custom.container.ContainerView>
+
+            </FrameLayout>
+
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    </FrameLayout>
+
+</layout>

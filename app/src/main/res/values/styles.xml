@@ -1,11 +1,23 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+
+
     </style>
+
+    <!-- Text Styles -->
+
+    <style name="style_text_light_on_button" >
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:textSize">@dimen/medium_text_size</item>
+        <item name="android:height">@dimen/medium_text_size</item>
+    </style>
+
+
 
 </resources>

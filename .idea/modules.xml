@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project version="4">
-  <component name="ProjectModuleManager">
-    <modules>
-      <module fileurl="file://$PROJECT_DIR$/Cavit-19.iml" filepath="$PROJECT_DIR$/Cavit-19.iml" group="Cavit-19" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" group="Cavit-19/app" />
-    </modules>
-  </component>
-</project>
